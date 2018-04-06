@@ -80,12 +80,12 @@ void DirSearch(const char *DirectoryName, const char *target )
 			    }
 			    if (Forkpid == 0) /* Child */
 			    {
-					/* Child recursive olarak tekrar gelir*/
-					DirSearch(pathName, target);
+				/* Child recursive olarak tekrar gelir*/
+				DirSearch(pathName, target);
 			        exit(0);
 			    }
-				else /* Parent childi bekliyor*/
-				  wait(NULL);
+			    else /* Parent childi bekliyor*/
+				wait(NULL);
 			}
         }
         else
